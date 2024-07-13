@@ -38,12 +38,14 @@ export default defineConfig({
       name: 'project1-smoke',
       testDir: './tests/project1/smoke',
       use: { ...devices['Desktop Chrome'] },
+      metadata: {env: 'QA'}
     },
 
     {
       name: 'project1-regression',
       testDir: './tests/project1/regression',
       use: { ...devices['Desktop Firefox'] },
+      metadata: {env: 'STG'}
     },
 
     {
