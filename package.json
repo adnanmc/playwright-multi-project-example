@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "ui": "playwright test --ui",
+    "ui-browser": "playwright test --ui-port=8080 --ui-host=0.0.0.0",
     "p1s": "playwright test --project=project1-smoke",
     "p2s": "playwright test --project=project2-smoke",
     "all": "playwright test",
