@@ -1,11 +1,22 @@
 import { defineConfig, devices } from '@playwright/test';
-
+import dotenv from 'dotenv';
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
 // import dotenv from 'dotenv';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
+
+// conditional load of .env file based on application environment such as .env.qa or .env.stg
+// create separate .env files for your needs and make sure to include them .gitignore file to avoid security leak
+// default will be .env
+
+if (!process.env.NODE_ENV) {
+  dotenv.config({ path: `${__dirname}//.env` });
+} else {
+  dotenv.config({ path: `${__dirname}//sample.env` });
+}
+
 
 /**
  * See https://playwright.dev/docs/test-configuration.
