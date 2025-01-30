@@ -9,16 +9,18 @@
     "p1s": "playwright test --project=project1-smoke",
     "p2s": "playwright test --project=project2-smoke",
     "all": "playwright test",
-    "report": "playwright show-report"
+    "report": "playwright show-report",
+    "install-browser": "npx playwright install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.45.1",
     "@types/node": "^20.14.10"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "@playwright/test": "^1.50.0",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.50.0"
   }
 }
